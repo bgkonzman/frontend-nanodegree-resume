@@ -14,18 +14,8 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-.clear-fix {
-  overflow: auto;
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
-
 h1 {
-  font-size: 40px;
+  font-size: 39px;
   color: #f5a623;
   line-height: 48px;
   display: inline;
@@ -58,25 +48,17 @@ h3,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+span {
+  display: block;
+  padding: 5px;
+  color: #386810;
 }
 
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
+img {
+  width: calc(100% - 20px);
+  padding: 10px;
 }
 
 p {
@@ -92,123 +74,207 @@ a {
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
 ul {
   list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+#main {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
 }
 
-img {
-  padding: 10px;
+#header{
+  width: 100%;
 }
 
-span {
-  padding: 5px;
+#name {
+  width: 50%;
+  padding: 30px 0 0 0;
 }
 
-#lets-connect {
+#nav-holder {
+  height: 40px;
+}
+
+#nav {
+  list-style-type: none;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 0 10px 0;
+  display: block;
+  max-width: 900px;
+  border-bottom: 1px solid gray;
+}
+
+.nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.nav-item {
+  width: 20%;
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+#info {
+  width: 100%;
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+#workExperience,
+#projects,
+#education,
+#mapDiv {
+  width: 100%;
 }
 
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+#lets-connect {
+  width: 100%;
+  background-color: #1f001f;
 }
 
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
 }
 
 #mapDiv {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  overflow: hidden;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
+#skills,
+#topContacts,
+#footerContacts{
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 10px auto;
+}
+
+.work-entry,
+.project-entry,
+.education-entry {
+  margin: 0 10px;
+}
+
+.biopic {
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+  margin: 0px 5px;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
+}
+
+.orange-text{
+  color: #f5a623;
+}
+
+.white-text {
+  color: white;
+}
+
+.dark-purple {
+  background-color: #1f001f;
+}
+.purple-gray {
+  background-color: #ebe6eb;
+}
+
+.green-gray {
+  background-color: #e9ece6;
+}
+
+@media screen and (min-width: 540px) {
+  #header{
+    width: 50%;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #nav-holder {
+    height: 0;
+  }
+
+  #info {
+    width: 50%;
+  }
+
+  #lets-connect {
+    display: none;
+  }
+
+  .project-image {
+    max-width: 400px;
     display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  #name {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #header{
+    width: 100%;
+  }
+
+  #name {
+    font-size: 40px;
+  }
+
+  #nav {
+    display: block;
+  }
+
+  #nav-holder {
+    height: 40px;
+  }
+
+  #info {
+    width: 100%;
+  }
+
+  #lets-connect {
+    display: block;
+  }
+
+  .biopic {
+    max-width: 250px;
+    width: 33.333%;
+    margin: 10px;
+    float: left;
+  }
+
+  .welcome-message{
+    margin: 20px;
   }
 }
