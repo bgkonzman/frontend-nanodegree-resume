@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <head>
   <meta charset="utf-8">
@@ -12,9 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div id="main">
-    <div id="header" class="dark-purple">
-      <nav id="nav-holder"></nav>
+  <div id="content">
+    <header id="header" class="dark-purple">
+      <div id="nav-holder"></div>
       <nav id="nav" class="dark-purple">
         <ul class="nav-list">
           <li class="nav-item"><a href="#workExperience">Work</a></li>
@@ -24,26 +24,26 @@
         </ul>
       </nav>
       <ul id="topContacts"></ul>
-    </div>
-    <div id="info" class="purple-gray">
-      <div id="workExperience">
+    </header>
+    <main id="info" class="purple-gray">
+      <section id="workExperience">
         <h2>Work Experience</h2>
-      </div>
-      <div id="projects" class="green-gray">
+      </section>
+      <section id="projects" class="green-gray">
         <h2>Projects</h2>
-      </div>
-      <div id="education">
+      </section>
+      <section id="education">
         <h2>Education</h2>
-      </div>
-    </div>
+      </section>
+    </main>
     <div id="mapDiv" class="green-gray">
       <h2>Where I've Lived and Worked</h2>
     </div>
-    <div id="lets-connect" class="dark-purple">
+    <footer id="lets-connect" class="dark-purple">
       <h2 class="orange-text center-text">Let's Connect</h2>
         <ul id="footerContacts">
       </ul>
-    </div>
+    </footer>
   </div>
 
   <script src="js/resumeBuilder.js"></script>
