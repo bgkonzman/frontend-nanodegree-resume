@@ -22,7 +22,7 @@ var bio = {
     },
     "displayHeader": function() {
         var header = $("#header");
-        var topContacts = $("#topContacts");
+        var topContacts = $("#top-contacts");
         var nav = $("#nav");
         var formattedContacts = new bio.formatContacts();
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -48,7 +48,7 @@ var bio = {
         }
     },
     "displayFooter": function() {
-        var footerContacts = $("#footerContacts");
+        var footerContacts = $("#footer-contacts");
         var formattedContacts = new bio.formatContacts();
 
         footerContacts.append(formattedContacts.formattedMobile);
@@ -74,7 +74,7 @@ var work = {
     }],
     "display": function() {
         for (var job in work.jobs) {
-            $("#workExperience").append(HTMLworkStart);
+            $("#work-experience").append(HTMLworkStart);
 
             var entry = $(".work-entry:last");
             var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -172,4 +172,4 @@ projects.display();
 education.display();
 bio.displayFooter();
 
-$("#mapDiv").append(googleMap);
+$("#map-div").append(googleMap);
